@@ -2,6 +2,9 @@
   "name": "ecommerce-react-graphql-stripe",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "10.x"
+  },
   "dependencies": {
     "gestalt": "^0.79.1",
     "react": "^16.4.2",
