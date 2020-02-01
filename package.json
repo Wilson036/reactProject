@@ -12,7 +12,7 @@
     "react-facebook-login": "^4.1.1",
     "react-google-login": "^5.0.7",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.5",
+    "react-scripts": "2.x.x",
     "react-spinners": "^0.4.5",
     "react-stripe-elements": "^2.0.1",
     "strapi-sdk-javascript": "^0.2.1"
