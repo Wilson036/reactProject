@@ -11,13 +11,22 @@ const apiUrl = process.env.API_URL||'http://localhost:1337';
 
 class Signup extends React.Component {
 
+    constructor(props){
+        super(props);
+        this.signup = this.signup.bind(this);
+    }
     state ={
       username:'',
       password:'',
       email:'',
       toast: false,
       toastMessage: '',
-      loading: false
+      loading: false,
+      redirect: false
+    }
+
+    signup(res, type){
+
     }
     handleChange = ({event, value}) => {
         event.persist();
@@ -64,9 +73,11 @@ class Signup extends React.Component {
         const { toastMessage, toast ,loading} =this.state;
         const responseGoogle = (response) => {
             console.log(response);
+            this.signup(response,'google');
           }
         const responseFacebook = (response) => {
             console.log(response);
+            this.signup(response,'Facebook');
         }  
         return(
             <Container>
@@ -132,7 +143,7 @@ class Signup extends React.Component {
                        alignItems="center" >
                        <GoogleLogin
                        inline
-                       clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
+                       clientId="378238829789-nf94tbi1n963jpiera6vsbife0hmi7u1.apps.googleusercontent.com"
                        buttonText="Login By Google"
                        onSuccess={responseGoogle}
                        onFailure={responseGoogle}
